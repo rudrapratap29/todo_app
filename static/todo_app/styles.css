@@ -1,0 +1,204 @@
+/* General styles */
+body {
+  /* background:linear-gradient(to right,
+        #8052ec,
+        #d161ff
+        ); */
+    background: url('images/thor-hammer-063j3j77rhieabqu.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  .container_2{
+    width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 2px solid #fff;
+    border-radius:10px;
+    box-shadow:0 15px 30px rgba(0,0,0,0.3);
+    color:#fff;
+    background:rgba(0, 0, 0, 0.808);
+
+  }
+  .container_3{
+    width: 800px;
+    margin: 0 auto;
+    margin-top: 15px;
+    padding: 20px;
+    border: 2px solid #fff;
+    border-radius:10px;
+    box-shadow:10px 15px 40px rgba(0,0,0,0.3);
+    color:#fff;
+  }
+  
+  h1 {
+    text-align: center;
+    color:#fff;
+    font-style: oblique;
+    text-decoration: underline;
+
+  }
+  
+  /* Task list styles */
+  .task-list {
+    list-style-type:none;
+    padding: 0;
+    border-radius: 10px;
+    box-shadow:0 15px 30px rgba(0,0,0,0.3);
+    background: rgba(0,0,0,.5);
+
+  }
+  
+  .task-list li {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    color:#fff;
+    box-shadow:0 15px 30px rgba(0,0,0,0.3);
+    background: rgba(0, 0, 0, 0.811);
+  }
+  
+  .task-list li:last-child {
+    margin-bottom: 0;
+  }
+  
+  .task-title {
+    font-weight: bold;
+    font-style: italic;
+    font-family: cursive;
+  }
+  
+  .task-description {
+    margin-top: 5px;
+  }
+  
+  .task-actions {
+    margin-top: 10px;
+  }
+  
+  .task-actions a {
+    margin-right: 10px;
+    text-decoration: none;
+  }
+  
+  .completed-task {
+    background-color: #d9f9e0;
+  }
+  
+  /* Task form styles */
+  .task-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color:#fff;
+  }
+
+  .login label{
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    border-radius: 5px;
+
+  }
+  .login input[type="text"],input[type="password"],
+  input[type="Email"]
+  {
+    width: 100%;
+    padding: 5px;
+    border-radius: 10px; 
+    box-sizing: border-box;
+    box-shadow:0 15px 30px rgba(0,0,0,0.3);
+  }
+  .signup input[type='text']{
+    display: block;
+    border-radius: 10px;
+
+  }
+  
+  .task-form input[type="text"],
+  .task-form textarea {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid ;
+    border-radius: 10px;
+    box-sizing: border-box;
+  }
+  
+  .task-form button {
+    width:100%;
+    font-weight:bold ;
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: #4caf4f4c;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  
+  .task-form button:hover {
+    background-color: #45a049;
+  }
+  
+  /* Task detail styles */
+  .task-detail {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    color:#fff;
+    box-shadow:0 15px 30px rgba(0,0,0,0.3);
+    background: rgba(0,0,0,.5);
+  }
+  
+  .task-status {
+    font-weight: bold;
+  }
+  
+  .task-actions-bottom {
+    margin-top: 20px;
+  }
+
+  a{
+    border:1px solid ;
+    border-width: 2px;
+    border-radius: 6px;
+    color:#fff;
+    background-color:#8052ec3e;
+    font-style: oblique;
+    padding:2px 4px;
+    text-decoration: none;
+  }
+  button{
+    border:1px solid ;
+    border-width: 2px;
+    border-radius: 6px;
+    color:#fff;
+    background-color:#8052ec34;
+    font-style: oblique;
+    font-size: large;
+  }
+
+  button:hover{
+    cursor: pointer;
+  }
+
+  
+  .p{
+    color:#fff;
+    font-weight: bolder;
+    font-size: large;
+  }
+
+  .create{
+    font-weight: bolder;
+  }
