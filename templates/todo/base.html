@@ -1,0 +1,18 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'todo_app/styles.css' %}">
+
+</head>
+<body>
+    {% if user.is_authenticated %}
+    <p class="p">{{request.user}} . click here to <a href="{% url 'logout' %}">logout</a></p>
+    {% endif %}
+    {% block content %}
+    {% endblock content %}
+</body>
+</html>

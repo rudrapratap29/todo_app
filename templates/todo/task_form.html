@@ -1,0 +1,16 @@
+{% extends 'todo/base.html' %}
+
+{% block content %}
+
+
+<div class="container">
+  <h1>Task Form</h1>
+
+  <form class="task-form" method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Save</button>
+  </form>
+</div>
+
+{% endblock content %}

@@ -1,0 +1,16 @@
+{% extends 'todo/base.html' %}
+
+{% block content %}
+
+<h1><span>welcome to Todo list App</span></h1>
+<div class="container_2">
+    <form method="post" class="login">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">login</button>
+    </form>
+
+    <p class="p">Not registerd yet? <a href="{% url 'signup' %}">Register now</a></p>
+
+</div>
+{% endblock content %}

@@ -1,0 +1,36 @@
+{% extends 'todo/base.html' %}
+
+{% block content %}
+
+
+<div class="container">
+  <h1>Todo List</h1>
+
+  <ul class="task-list">
+    {% for task in tasks %}
+      <li class="{% if task.completed %}completed-task{% endif %}">
+        <h2 class="task-title">{{ task.title }}</h2>
+        <p class="task-description">{{ task.description }}</p>
+        <p class="create">Created at: {{ task.created_at }}</p>
+        {% if task.completed %}
+          <p class="task-status">Status: Completed</p>
+        {% else %}
+          <p class="task-status">Status: Incomplete</p>
+          <a href="{% url 'task_complete' pk=task.pk %}">Mark as Complete</a>
+        {% endif %}
+        <div class="task-actions">
+          <a href="{% url 'task_detail' pk=task.pk %}">View</a>
+          <a href="{% url 'task_update' pk=task.pk %}">Edit</a>
+          <a href="{% url 'task_delete' pk=task.pk %}">Delete</a>
+        </div>
+      </li>
+    {% empty %}
+      <p>No tasks available.</p>
+    {% endfor %}
+  </ul>
+
+  <a href="{% url 'task_create' %}">Create Task</a>
+</div>
+
+
+{% endblock content %}

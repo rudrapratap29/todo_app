@@ -1,0 +1,27 @@
+{% extends 'todo/base.html' %}
+
+{% block content %}
+
+
+<div class="container">
+  <h1>Task Detail</h1>
+
+  <div class="task-detail">
+    <h2 class="task-title">{{ task.title }}</h2>
+    <p class="task-description">{{ task.description }}</p>
+    <p class="create">Created at: {{ task.created_at }}</p>
+    {% if task.completed %}
+      <p class="task-status">Status: Completed</p>
+    {% else %}
+      <p class="task-status">Status: Incomplete</p>
+      <a href="{% url 'task_complete' pk=task.pk %}">Mark as Complete</a>
+    {% endif %}
+  </div>
+
+  <div class="task-actions-bottom">
+    <a href="{% url 'task_update' pk=task.pk %}">Edit</a>
+    <a href="{% url 'task_delete' pk=task.pk %}">Delete</a>
+  </div>
+</div>
+
+{% endblock content %}

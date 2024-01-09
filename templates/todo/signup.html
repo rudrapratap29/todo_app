@@ -1,0 +1,17 @@
+{% extends 'todo/base.html' %}
+
+{% block content %}
+
+{% if form.error %}
+{{ form.error }}
+{% endif %}
+
+<div class="container_3">
+    <form  method="post" class="signup">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">SignUp</button>
+    </form>
+</div>
+
+{% endblock content %}
